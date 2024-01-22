@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "target": "es6",
+      "noImplicitAny": true,
+      "moduleResolution": "node",
+      "sourceMap": false,
+      "outDir": "dist",
+      "baseUrl": ".",
+      "importHelpers": true,
+      "allowSyntheticDefaultImports": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "strictPropertyInitialization": false,
+      "jsx": "react",
+      "lib": ["es6", "dom"],
+      "types": [
+          "webpack-env",
+          "node",
+          "mocha",
+          "chai",
+          "reflect-metadata"
+      ],
+      "paths": {
+          "@src/*": [
+          "src/*"
+      ]
+      },
+  },
+  "include": [
+      "src/**/*","index.ts"
+  ],
+  "types": [ "node" ],
+  "exclude": [
+      "node_modules",
+    ]
+}
