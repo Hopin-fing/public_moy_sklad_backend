@@ -12,21 +12,16 @@ export default class Counterparties {
     getContent(): TCounterpartyClear[] {
         const result: TCounterpartyClear[] = [];
         this.req.forEach((item) => {
-            try {
-                const resultObj: TCounterpartyClear = {
-                    id: item.id,
-                    portal_id: item.portal_id,
-                    name: item.name,
-                    marketplace: item.marketplace,
-                    status: item.status,
-                    is_fbs: item.is_fbs,
-                    is_fbo: item.is_fbo
-                };
-                result.push(resultObj);
-            } catch (error) {
-                console.log('TCounterpartyClear error', error);
-                console.log('TCounterpartyClear item', item);
-            }
+            const resultObj: TCounterpartyClear = {
+                id: item.id,
+                portal_id: item.portal_id,
+                name: item.name,
+                marketplace: item.marketplace,
+                status: item.status,
+                is_fbs: item.is_fbs,
+                is_fbo: item.is_fbo
+            };
+            result.push(resultObj);
         });
         return result;
     }

@@ -54,13 +54,6 @@ const app = server.build(),
 app.listen(port, async () => {
     console.log(`server started at http://localhost:${port}`);
 
-    const config: any = {
-        headers: {
-            'Content-Type': 'application/json',
-            'Retry-After': '2000'
-        },
-        method: 'GET'
-    };
     try {
         await fetch(`http://localhost:${port}/order/context/item`, config).then(async (response: any) => console.log(await response.json()));
         console.log('end');
